@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barra Circolare Animata</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #e01c1c;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        display: flex;
+        width: 500px;
+        padding: 50px 0;
+        border-radius: 8px;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        justify-content: center;
+      }
+
+      .circular-progress {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: relative;
+        background: conic-gradient(#e01c1c 3.6deg, #ffffff 0deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .circular-progress::before {
+        content: "";
+        position: absolute;
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        background-color: #ffffff;
+      }
+
+      .progress-value {
+        position: relative;
+        font-size: 50px;
+        font-weight: 600;
+        color: #e01c1c;
+      }
+
+      .text {
+        font-size: 24px;
+        color: #606060;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circular-progress">
+        <span class="progress-value">0%</span>
+      </div>
+
+      <span class="text">HTML & CSS</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
